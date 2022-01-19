@@ -1,0 +1,163 @@
+#defining a python class and method in it whoch stores all the names of the currency currency and various methods of convertions
+class Currencyconverter:
+  print("Welcome to currency converter. How do you want to convert your USD?")
+  #printing various country currency followed by a number
+  def Currency():
+    print("1.British Pound")
+    print("2.Euros")
+    print("3.Indian Rupee")
+    print("4.Malaysian Ringgit")
+    print("5.Indonesian Rupiah")
+    print("6.Nepalese Rupee")
+    print("7.Bangladeshi Taka")
+    print("8.Singapore Dollar")
+    print("9.Canadian Dollar")
+    print("10.Chinese Yuan")
+    print("11.Pakistani Rupee")
+    print("12.Brazilian Real")
+    print("13.Russian Ruble")
+    print("14.Japanese Yen")
+    print("15.Nigerian Naira")
+  Currency()
+  def CurrencyConverter():
+#asking user for a number and defining possible set of errors that will raise and printing statements
+#if the number is out of range and giving user a second chance to enter a number correctly
+#taking number of usd from the user and passing the same parameter throught all the country currency methods
+      try:
+        choice= int(input("Enter your choice in between 1 and 15: "))
+        if choice<0 or choice>15:
+            print("Please enter a valid number!!!")
+            choice= int(input("Enter your choice in between 1 and 15: "))
+#taking number of usd from the user and returning a statement if the number is less than zero or if the user enters any string insted of number
+#defining value error if user enters any str instead of int
+        else:
+            try:
+              USD= int(input("Enter USD value: "))
+              if USD<0:
+                print("Currency cannot be negative")
+                USD= int(input("Enter USD value: "))
+            except ValueError:
+              print("Please enter a valid number")
+              USD= int(input("Enter USD value: "))
+#defining some if conditions to convert the currency to desired country currency
+#all the convertion rates are based on rated on November 20,2021
+#multiplying the usd to the desired country currency
+        if choice==1:
+          def BritishPound(USD):
+            converter= USD*0.74
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Pound Sterling")
+          BritishPound(USD)
+        if choice==2:
+          def Euro(USD):
+            converter= USD*0.89
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Euros")
+          Euro(USD)
+        if choice==3:
+          def IndianRupee(USD):
+            converter= USD*74.31
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Indian Rupees")
+          IndianRupee(USD)
+        if choice==4:
+          def MalaysianRinggit(USD):
+            converter=USD*4.18
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Malaysian Ringgit")
+          MalaysianRinggit(USD)
+        if choice==5:
+          def IndonesianRupiah(USD):
+            converter=USD*14269.35
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Indonesian Rupiah")
+          IndonesianRupiah(USD)
+        if choice==6:
+          def NepaleseRupee(USD):
+            converter=USD*118.74
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Nepalese Rupee")
+          NepaleseRupee(USD)
+        if choice==7:
+          def BangladeshiTaka(USD):
+            converter=USD*85.67
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Bangladeshi Taka")
+          BangladeshiTaka(USD)
+        if choice==8:
+          def SingaporeDollar(USD):
+            converter=USD*1.36
+            print()
+            print("As of November 20, 2021, ", end="")
+            print(USD, "USD is equal to", converter, "Singapore Dollar")
+          SingaporeDollar(USD)
+        if choice==9:
+          def CanadianDollar(USD):
+            converter=USD*1.26
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Canadian Dollar")
+          CanadianDollar(USD)
+        if choice==10:
+          def ChineseYuan(USD):
+            converter=USD*6.39
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Chinese Yuan")
+          ChineseYuan(USD)
+        if choice==11:
+          def PakistaniRupee(USD):
+            converter=USD*175.06
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Pakistani Rupee")
+          PakistaniRupee(USD)
+        if choice==12:
+          def BrazilianReal(USD):
+            converter=USD*5.61
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Brazilian Real")
+          BrazilianReal(USD)
+        if choice==13:
+          def RussianRuble(USD):
+            converter=USD*73.52
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Russian Ruble")
+          RussianRuble(USD)
+        if choice==14:
+          def JapaneseYen(USD):
+            converter=USD*114.02
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Japanese Yen")
+          JapaneseYen(USD)
+        if choice==15:
+          def NigerianNaira(USD):
+            converter=USD*410.84
+            print()
+            print("As of November 20, 2021")
+            print(USD, "USD is equal to", converter, "Nigerian Naira")
+          NigerianNaira(USD)
+      except ValueError:
+        print("rerun the coder and Enter a valid number/value")
+  CurrencyConverter()
+  print()
+#asking user weather user wanna continue converting again or not
+#if the user want to continue rerunning the method currency converter
+#if the user don't want to continue printing an endnote
+  again= str(input("Do you want to convert more(yes/no): "))
+  again=again.lower()
+  if again=="yes":
+      CurrencyConverter()
+  if again=="no":
+    print("Thank you for using Python Currency Converter")
+    print("Have a great day")
